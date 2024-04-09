@@ -10,7 +10,7 @@ export default function About() {
         <Container maxWidth="md">
             <Grid container spacing={8} sx={{padding: 4}}>
                 <Grid item xs={7}>
-                    <Typography variant="h4" component="h1" sx={{ mb: 2, color: '#ffde00' }}>
+                    <Typography variant="h4" component="h1" sx={{ mb: 2, color: '#ffde00', fontWeight: 'bold' }}>
                         Quem somos
                     </Typography>
                     <Typography sx={{ mb: 2 }}>
