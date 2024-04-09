@@ -13,8 +13,9 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import logo from "@/images/logo-test.jpg";
+import Image from "next/image";
 
 interface Props {
     /**
@@ -37,10 +38,6 @@ export default function DrawerAppBar(props: Props) {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2 }}>
-                MM Plásticos e Embalagens
-            </Typography>
-            <Divider />
             <List>
                 {navItems.map((item) => (
                     <ListItem key={item} disablePadding>
@@ -65,20 +62,20 @@ export default function DrawerAppBar(props: Props) {
                         aria-label="open drawer"
                         edge="start"
                         onClick={handleDrawerToggle}
-                        sx={{ mr: 2, display: { sm: 'none' } }}
+                        sx={{mr: 2, display: {sm: 'none'}}}
                     >
-                        <MenuIcon />
+                        <MenuIcon/>
                     </IconButton>
-                    <Typography
-                        variant="h6"
-                        component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-                    >
-                        MM Plásticos e Embalagens
-                    </Typography>
-                    <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    <Image
+                        width={50}
+                        height={50}
+                        src={logo}
+                        alt={'logo'} >
+                    </Image>
+                    <div style={{flexGrow: "1"}}></div>
+                    <Box sx={{display: {xs: 'none', sm: 'block'}}}>
                         {navItems.map((item) => (
-                            <Button key={item} sx={{ color: '#ffde00' }}>
+                            <Button key={item} sx={{color: '#ffde00'}}>
                                 {item}
                             </Button>
                         ))}
