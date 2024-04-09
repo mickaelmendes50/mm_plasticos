@@ -2,6 +2,8 @@ import Image from "next/image";
 import DrawerAppBar from "@/components/DrawerAppBar";
 import {Container} from "postcss";
 import About from "@/app/about/About";
+import Footer from "@/components/Footer";
+import Divider from "@mui/material/Divider";
 
 export default function Home() {
   return (
@@ -119,6 +121,8 @@ export default function Home() {
           </div>
         </main>
         <About></About>
+        <Divider color={'white'} style={{margin: 50}} />
+        <Footer></Footer>
       </>
   );
 }
